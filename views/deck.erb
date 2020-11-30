@@ -1,0 +1,7 @@
+<% Deck::STANDARD_SUITS.each do |suit| %>
+  <div class='row'>
+    <% @deck.send(suit.to_sym).each do |card| %>
+      <%= erb :card, locals: { card: card } %>
+    <% end %>
+  </div>
+<% end %>

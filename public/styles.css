@@ -1,0 +1,47 @@
+ :root {
+  --pink-1: #FFCBF2;
+  --pink-2: #F3C4FB;
+  --pink-3: #ECBCFD;
+  --purple-1: #E5B3FE;
+  --purple-2: #E2AFFF;
+  --purple-3: #DEAAFF;
+  --purple-4: #D8BBFF;
+  --periwinkle: #D0D1FF;
+  --light-blue: #C8E7FF;
+  --aqua: #C0FDFF;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--pink-1);
+  width: 100%;
+  height: 100%;
+  font-family: Verdana;
+}
+
+.row {
+  margin: 2rem;
+  display: block;
+}
+
+.card {
+  margin: 0.5rem;
+  display: inline-block;
+  height: 100px;
+  width: 70px;
+  border: 1px solid var(--purple-3);
+  background-color: var(--aqua);
+}
+
+.card-suit {
+  height: 30px;
+}
+
+/*
+
+Icons for card views?
+
+Suits
+- hearts - https://fontawesome.com/icons/heart?style=solid
+
+*/

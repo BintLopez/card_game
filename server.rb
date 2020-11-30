@@ -6,12 +6,8 @@ enable :sessions
 set :session_secret, 'setme'
 
 get '/' do
-  deck = Deck.new
-  content = Deck::STANDARD_SUITS.map do |suit|
-    "<div class='row'>" +
-    deck.send(suit.to_sym).map { |card| card.display_html }.join +
-    "</div>"
-  end.join
+  @deck = Deck.new
+  erb(:deck, collection: @deck)
 end
 
 get '/card' do

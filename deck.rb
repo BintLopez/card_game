@@ -8,6 +8,13 @@ class Deck
   STANDARD_POINT_VALUES = (2..14).to_a
   DEFAULT_POINT_STRATEGY = 'faces_worth_ten'
 
+  SUIT_IMAGERY = {
+    hearts: 'hearts-glitchy',
+    spades: 'spades-green',
+    diamonds: 'diamonds-sparkles',
+    clubs: 'clubs-line-2'
+  }
+
   STANDARD_SUITS.each do |suit|
     define_method("#{suit}".to_sym) do
       cards.select { |card| card.suit == suit }

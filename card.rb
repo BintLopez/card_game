@@ -1,3 +1,5 @@
+require_relative 'deck'
+
 class Card
   FACE_VALUES_MAP = {
      2 => 'two',
@@ -46,6 +48,10 @@ class Card
     end
   end
 
+  def suit_image
+    Deck::SUIT_IMAGERY[suit.to_sym]
+  end
+
   def face_value
     FACE_VALUES_MAP[value]
   end
@@ -70,14 +76,6 @@ class Card
     else
       value
     end
-  end
-
-  def display_html
-    "
-      <div class='card'>
-        #{name}
-      </div>
-    "
   end
 
 end
