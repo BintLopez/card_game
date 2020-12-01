@@ -53,6 +53,14 @@ class Card
   end
 
   def face_value
+    return 'A' if value == 14
+    return 'K' if value == 13
+    return 'Q' if value == 12
+    return 'J' if value == 11
+    value.to_s
+  end
+
+  def face_value_long
     FACE_VALUES_MAP[value]
   end
 

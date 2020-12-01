@@ -25,16 +25,36 @@ body {
 }
 
 .card {
+  font-family: 'Press Start 2P', cursive;
   margin: 0.5rem;
   display: inline-block;
   height: 100px;
   width: 70px;
   border: 1px solid var(--purple-3);
   background-color: var(--aqua);
+  position: relative;
 }
 
 .card-suit {
+  position: absolute;
   height: 30px;
+  width: 30px;
+  top: 35px;
+  left: 20px;
+}
+
+.face-value {
+  position: absolute;
+}
+
+.face-value:first-of-type {
+  left: 2px;
+  top: 2px;
+}
+
+.face-value:last-of-type {
+  right: 1px;
+  bottom: 1px;
 }
 
 /*
